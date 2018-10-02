@@ -1,10 +1,16 @@
-# slack-bulkinviter
+### Slack-Bulkinviter
 
-Super quick and dirty Python script to bulk invite ALL users in a slack team to a specific channel. We need to do this regulary with [Counterparty](http://www.counterparty.io) when we create a new channel that everyone should be in, or move things around.
+Super quick and dirty Python script to bulk invite ALL users in a slack team to a specific channel. Forked from [robby-dermody/slack-bulkinviter](https://github.com/robby-dermody/slack-bulkinviter).
 
 To use:
 * Install the [slacker](https://github.com/os/slacker) library via `pip`
-* [Get an API key](https://get.slack.help/hc/en-us/articles/215770388-Creating-and-regenerating-API-tokens)
-* Create a file in the same directory as `slack-bulkinviter.py` called `apikey.txt`, containing your API key
-* Execute the script, passing the name of the channel where all users will be invited, such as `./slack-bulkinviter.py mychannel`
-* Sit back and let it do its work
+* [Get an API key](hhttps://api.slack.com/slack-apps)
+* Store your API key as an environment variable; change the varname according to your needs.
+* Execute the script, passing the name of the channel where all users will be invited. Example:
+
+	`./slack-bulkinviter.py --channel mychannel`
+
+* Sit back and let it do its work.
+
+Additional info:
+* The tool does not allow you to invite bots or yourself to a channel. 
